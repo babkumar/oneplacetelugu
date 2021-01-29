@@ -11,9 +11,9 @@ class biblestudy extends Component{
             <div>
                     <div className="bibleStudy" >
                 <div className="bibleStudy">
-                   <img src={Revelations15} height="50%" width="50%" className="revelations"/>
+                   <img src={Revelations15} height={"100%"}  width={"100%"} className="revelations"/>
 
-                <h2>We are currently reading Revelations Chapter 15.</h2>
+                <i>We are currently reading Revelations Chapter 15.</i>
 
                 </div>
                 </div>

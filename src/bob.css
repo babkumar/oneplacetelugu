@@ -71,8 +71,9 @@ ul.account li a {
     image-rendering: auto;
 }
 .revelations{
-    position: absolute;
-    top: 200px;
-    right:50px;
+    position: relative;
+
 
 }
+
+

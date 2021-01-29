@@ -15,23 +15,25 @@ class Main extends Component {
         return(
             <HashRouter>
                 <div >
-                    <h1>Telugu Christian Bible Resources</h1>
-                    <ul className="header">
-                        <li><NavLink to ="/biblestudy">Bible Study</NavLink></li>
-                        <li><NavLink exact to="/">OneplaceTelugu</NavLink></li>
-                        <li><NavLink to ="/akk">Andhra Kristhava Keerthanalu</NavLink></li>
-                        <li><NavLink to ="/ptcs">Popular Telugu Christian Songs</NavLink></li>
+
+                      <h2>Telugu Christian Bible Resources</h2>
+                         <ul className="header">
+                             <li><NavLink to ="/biblestudy">Bible Study</NavLink></li>
+                              <li><NavLink exact to="/">OneplaceTelugu</NavLink></li>
+                                 <li><NavLink to ="/akk">Andhra Kristhava Keerthanalu</NavLink></li>
+                                <li><NavLink to ="/ptcs">Popular Telugu Christian Songs</NavLink></li>
+                         </ul>
 
 
-                    </ul>
                    <div className="content">
                        <Route path="/biblestudy" component={BibleStudy}/>
                        <Route exact path="/" component={OneplaceTelugu}/>
-                       <Route path="/akk" component={Akksongs}/>
+                       <Route path="/akk" component={Akksongs} onLoadError={console.error}/>
                        <Route path="/ptcs" component={Ptcs}></Route>
 
 
                    </div>
+
                 </div>
             </HashRouter>
         );
