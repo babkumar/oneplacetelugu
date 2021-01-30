@@ -2,7 +2,7 @@ import React from "react";
 import "./bob.css";
 import {Component} from "react";
 import OneplaceTelugu from "./oneplacetelugu";
-import Mydailybread from "./mydailybread";
+//import Mydailybread from "./mydailybread";
 import Akksongs from "./akk";
 import Ptcs from "./ptcs";
 import BibleStudy from "./biblestudy";
