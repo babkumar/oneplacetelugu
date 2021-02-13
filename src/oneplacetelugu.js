@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Arthur from "./arthur.jpeg";
+import Arthur from "./arthur.png";
 import "./bob.css";
 
 

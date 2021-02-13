@@ -67,7 +67,7 @@ ul.account li a {
 }
 .arthur-image
 {
-    background-image: image("arthur.jpeg");
+    background-image: image("arthur.png");
     height: 10%;
     width:10%;
 }
