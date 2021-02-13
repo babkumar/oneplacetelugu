@@ -1,22 +1,73 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Document, Page,pdfjs } from 'react-pdf';
+import Akkpdf from "./akk.pdf";
 
-//import SinglePagePDFViewer from "./components/pdf/single-page";
-//import AllPagesPDFViewer from "./components/pdf/all-pages";
-//import { sampleBase64pdf } from "./sampleBase64pdf";
-/* This is required only if the project file is located
-inside the app. Otherwise you can use the external link of the pdf file*/
-import samplePDF from "./akk.pdf";
 
-import "./styles.css";
 
-export default function App() {
+export default function Test() {
+
+    pdfjs.GlobalWorkerOptions.workerSrc =
+        `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+    const [numPages, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+
+    /*To Prevent right click on screen*/
+    document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+    });
+
+    /*When document gets loaded successfully*/
+    function onDocumentLoadSuccess({ numPages }) {
+        setNumPages(numPages);
+        setPageNumber(1);
+    }
+
+    function changePage(offset) {
+        setPageNumber(prevPageNumber => prevPageNumber + offset);
+    }
+
+    function previousPage() {
+        changePage(-1);
+    }
+
+    function nextPage() {
+        changePage(1);
+    }
+
     return (
-        <div className="App">
+        <>
+            <div className="main">
+                <Document
+                    file={Akkpdf}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                >
+                    <Page pageNumber={pageNumber} />
+                </Document>
+                <div>
+                    <div className="pagec">
+                        Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
+                    </div>
+                    <div className="buttonc">
+                        <button
+                            type="button"
+                            disabled={pageNumber <= 1}
+                            onClick={previousPage}
+                            className="Pre"
 
-            <h4>Andhra Kristhava Keerthanalu</h4>
-            <object width="100%" height="400" data={samplePDF} type="application/pdf">   </object>
+                        >
+                            Previous
+                        </button>
+                        <button
+                            type="button"
+                            disabled={pageNumber >= numPages}
+                            onClick={nextPage}
 
-
-        </div>
+                        >
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }

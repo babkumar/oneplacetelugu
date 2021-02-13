@@ -15,7 +15,6 @@ class Main extends Component {
         return(
             <HashRouter>
                 <div >
-
                       <h2>Telugu Christian Bible Resources</h2>
                          <ul className="header">
                              <li><NavLink to ="/biblestudy">Bible Study</NavLink></li>
@@ -26,10 +25,10 @@ class Main extends Component {
 
 
                    <div className="content">
-                       <Route path="/biblestudy" component={BibleStudy}/>
-                       <Route exact path="/" component={OneplaceTelugu}/>
-                       <Route path="/akk" component={Akksongs} onLoadError={console.error}/>
-                       <Route path="/ptcs" component={Ptcs}></Route>
+                       <Route exact path="/biblestudy" component={BibleStudy} />
+                       <Route exact path="/" component={OneplaceTelugu} />
+                       <Route exact path="/akk" component={Akksongs} />
+                       <Route exact path="/ptcs" component={Ptcs}></Route>
 
 
                    </div>
