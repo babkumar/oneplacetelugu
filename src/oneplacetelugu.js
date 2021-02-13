@@ -6,8 +6,10 @@ class oneplacetelugu extends Component{
     render() {
         return (
             <div>
-                <h2>We want you to grow in faith and hope. Its our attempt to bring all possible resources available
-                for you to grow in faith and hope of our Lord Jesus Christ.</h2>
+                <h2>Welcome</h2>
+                <h3>We are Happy that you were able to find us.  We want you to join us in reading the Word of GOD, Study and apply to our lives.</h3>
+                    <h3>Let us grow together in the faith and hope our Lord has set for us.</h3>
+                <h4>If you are interested to join us, please write to us at <i><u>fbsphx@gmail.com</u></i></h4>
             </div>
 
         );
