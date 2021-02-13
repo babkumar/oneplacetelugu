@@ -47,3 +47,8 @@ button {
     max-height: 500px;
     overflow: auto;
 }
+
+.footer-format
+{
+    text-align: center;
+}

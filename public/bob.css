@@ -50,7 +50,7 @@ ul.account li a {
 {
     background-color: azure;
     padding:20px;
-    height: 450px;
+    height: 500px;
 }
 .content h2{
     padding: 0;
@@ -91,17 +91,5 @@ ul.account li a {
     background-image: image("public/fbs.png");
     height:100%;
     width:100%;
-}
-
-.fbsbanner
-{
-    background-image: image("fsbbanner.png");
-    height: 90px;
-    width: 100%;
-}
-.fbsfooter{
-    background-image: image("fbs-footer.png");
-    height: 90px;
-    width: 100%;
 }
 
